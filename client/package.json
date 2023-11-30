@@ -1,8 +1,9 @@
 {
-  "name": "vite-chat-app",
+  "name": "dev-chats-app",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "author": "Vitthal Gund",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
