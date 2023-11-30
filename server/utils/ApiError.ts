@@ -7,7 +7,7 @@ class ApiError extends Error {
   statusCode: number;
   data: null;
   success: boolean;
-  errors: never[];
+  errors: any[];
   /**
    *
    * @param {number} statusCode
@@ -18,7 +18,7 @@ class ApiError extends Error {
   constructor(
     statusCode: number,
     message: string = "Something went wrong",
-    errors: never[] = [],
+    errors: any[] | any = [],
     stack: string = ""
   ) {
     super(message);
