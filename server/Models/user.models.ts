@@ -9,8 +9,9 @@ import {
   UserLoginType,
   UserRolesEnum,
 } from "../constants";
+import { userSchemaType } from "../types/userSchmeType";
 
-const userSchema = new Schema(
+const userSchema = new Schema<userSchemaType>(
   {
     avatar: {
       type: {
