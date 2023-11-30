@@ -3,10 +3,7 @@ import { User } from "../Models/user.models.js";
 import { ApiError } from "../utils/ApiError.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import jwt, { JwtPayload } from "jsonwebtoken";
-
-type CustomJwtPayload = {
-  _id: string;
-} & JwtPayload;
+import { CustomJwtPayload, userSchemaType } from "../types/userSchmeType.js";
 
 export const verifyJWT = asyncHandler(async (req, res, next) => {
   const token =
@@ -82,7 +79,7 @@ export const verifyPermission = (
     async (
       req: import("express").Request,
       res: import("express").Response,
-      next
+      next: import("express").NextFunction
     ) => {
       if (!req.user?._id) {
         throw new ApiError(401, "Unauthorized request");
