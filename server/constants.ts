@@ -1,7 +1,7 @@
 /**
  * @type {{ ADMIN: "ADMIN"; USER: "USER"} as const}
  */
-export const UserRolesEnum: { ADMIN: "ADMIN"; USER: "USER" } = {
+export const UserRolesEnum: { ADMIN: string; USER: string } = {
   ADMIN: "ADMIN",
   USER: "USER",
 };
@@ -12,9 +12,9 @@ export const AvailableUserRoles = Object.values(UserRolesEnum);
  * @type {{ PENDING: "PENDING"; CANCELLED: "CANCELLED"; DELIVERED: "DELIVERED" } as const}
  */
 export const OrderStatusEnum: {
-  PENDING: "PENDING";
-  CANCELLED: "CANCELLED";
-  DELIVERED: "DELIVERED";
+  PENDING: string;
+  CANCELLED: string;
+  DELIVERED: string;
 } = {
   PENDING: "PENDING",
   CANCELLED: "CANCELLED",
@@ -27,9 +27,9 @@ export const AvailableOrderStatuses = Object.values(OrderStatusEnum);
  * @type {{ UNKNOWN:"UNKNOWN"; RAZORPAY: "RAZORPAY"; PAYPAL: "PAYPAL"; } as const}
  */
 export const PaymentProviderEnum: {
-  UNKNOWN: "UNKNOWN";
-  RAZORPAY: "RAZORPAY";
-  PAYPAL: "PAYPAL";
+  UNKNOWN: string;
+  RAZORPAY: string;
+  PAYPAL: string;
 } = {
   UNKNOWN: "UNKNOWN",
   RAZORPAY: "RAZORPAY",
@@ -52,9 +52,9 @@ export const AvailableCouponTypes = Object.values(CouponTypeEnum);
  * @type {{ GOOGLE: "GOOGLE"; GITHUB: "GITHUB"; EMAIL_PASSWORD: "EMAIL_PASSWORD"} as const}
  */
 export const UserLoginType: {
-  GOOGLE: "GOOGLE";
-  GITHUB: "GITHUB";
-  EMAIL_PASSWORD: "EMAIL_PASSWORD";
+  GOOGLE: string;
+  GITHUB: string;
+  EMAIL_PASSWORD: string;
 } = {
   GOOGLE: "GOOGLE",
   GITHUB: "GITHUB",
