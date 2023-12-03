@@ -13,6 +13,9 @@ import { userSchemaType } from "../types/userSchmeType";
 
 const userSchema = new Schema<userSchemaType>(
   {
+    _id: {
+      type: mongoose.Types.ObjectId,
+    },
     avatar: {
       type: {
         url: String,
