@@ -1,5 +1,7 @@
 import { JwtPayload } from "jsonwebtoken";
+import mongoose from "mongoose";
 export type userSchemaType = {
+  _id: mongoose.ObjectId;
   avatar: {
     localPath: string;
     type: {
