@@ -72,9 +72,7 @@ export const getLoggedInUserOrIgnore = asyncHandler(async (req, res, next) => {
  * * This middleware is responsible for validating multiple user role permissions at a time.
  * * So, in future if we have a route which can be accessible by multiple roles, we can achieve that with this middleware
  */
-export const verifyPermission = (
-  roles: { ADMIN: string; USER: string }[] = []
-) =>
+export const verifyPermission = (roles: any) =>
   asyncHandler(
     async (
       req: import("express").Request,
